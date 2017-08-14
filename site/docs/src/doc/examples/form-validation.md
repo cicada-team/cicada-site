@@ -112,7 +112,7 @@ const validators = {
 <div>
   <h3>异步校验</h3>
   <p>输入 万万没想到 会出错</p>
-  <C.Input bind="nickName" getInitialState={() => ({ label: '昵称' })} validator={{ onChange: [{ fn: validators.notExist }] }} />
+  <C.Input bind="nickName" getInitialState={() => ({ label: '昵称' })} validator={ { onChange: [{ fn: validators.notExist }] } } />
 </div>
 ```
 notExist 直接返回一个 promise  交给后台 validation 使用。用户无需再定义处理异步的流程。
@@ -135,7 +135,7 @@ const validators = {
   <C.Checkbox getInitialState={() => ({ text: '点我显示下面Input框' })} bind="showAdvance" />
   <C.Input bind="advance" getInitialState={() => ({ label: '高级选项' })} visible={[({ stateTree: stateTreeUtil }) => {
     return stateTreeUtil.get('showAdvance.checked') === true
-  }]} validator={{ onChange: [{ fn: validators.notEmpty }] }}
+  }]} validator={ { onChange: [{ fn: validators.notEmpty }] } }
   />
 </div>
 
@@ -147,7 +147,7 @@ const validators = {
 ```js
 ...
 <div>
-  <C.Button getInitialState={() => ({ text: '重置' })} listeners={{ onClick: { fns: [{ fn({ validation }) { validation.reset('') } }] } }} />
+  <C.Button getInitialState={() => ({ text: '重置' })} listeners={ { onClick: { fns: [{ fn({ validation }) { validation.reset('') } }] } } } />
 </div>
 ```
 validation 作为参数传入到 onClick 方法中，通过 `validation.reset('')` 我们重置了所有表单验证组件的状态。事实上，validation 作为 utility 扩展，自身维护了一份当前所有验证组件的状态，并提供了基本的数据操作例如 reset，get，merge 供用户使用。
