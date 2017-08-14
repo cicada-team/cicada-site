@@ -32,7 +32,7 @@ const background = createBackground({
 
 ``` 
 
-Unique key 用作循环生成的子组件的 key
+Unique key 用作循环生成的子组件的 key
 
 ```js
 let globalKey = 0
@@ -111,7 +111,7 @@ ReactDom.render(
   >
     <div>
       <C.Input bind="todoInput" getInitialState={() => ({ label: '任务' })} />
-      <C.Button getInitialState={() => ({ text: '添加' })} listeners={{ onClick: { fns: [{ fn: addOne }] } }} />
+      <C.Button getInitialState={() => ({ text: '添加' })} listeners={ { onClick: { fns: [{ fn: addOne }] } } } />
       <C.TodoList bind="todoList">
         <C.Todo
           bind="todo"
@@ -129,10 +129,10 @@ ReactDom.render(
           visible={[showVisible]}
         />
       </C.TodoList>
-      <C.Button getInitialState={() => ({ text: '已完成' })} listeners={{ onClick: { fns: [{ fn: showCompleted }] } }} />
-      <C.Button getInitialState={() => ({ text: '未完成' })} listeners={{ onClick: { fns: [{ fn: showNotCompleted }] } }} />
-      <C.Button getInitialState={() => ({ text: '全部' })} listeners={{ onClick: { fns: [{ fn: showAll }] } }} />
-      <C.Button bind="show" getInitialState={() => ({ text: '标记全部已完成' })} listeners={{ onClick: { fns: [{ fn: toggleAllCompleted }] } }} />
+      <C.Button getInitialState={() => ({ text: '已完成' })} listeners={ { onClick: { fns: [{ fn: showCompleted }] } } } />
+      <C.Button getInitialState={() => ({ text: '未完成' })} listeners={ { onClick: { fns: [{ fn: showNotCompleted }] } } } />
+      <C.Button getInitialState={() => ({ text: '全部' })} listeners={ { onClick: { fns: [{ fn: showAll }] } } } />
+      <C.Button bind="show" getInitialState={() => ({ text: '标记全部已完成' })} listeners={ { onClick: { fns: [{ fn: toggleAllCompleted }] } } } />
     </div>
   </Render>,
   document.getElementById('root'),
