@@ -44,9 +44,9 @@ ReactDom.render(
   </ Render>, document.getElementById('root')),
 ```
 
-一个标准的 Cicada 程序包含了上面几个部分。接下来我们会根据 Cicada 提供的 Validation 扩展，处理常见的表单验证场景。
+一个标准的 Cicada 程序包含了上面几个部分。接下来我们会根据 Cicada 提供的 Validation 扩展，处理常见的表单验证场景。
 
-## 非空验证
+## 非空验证
 ```js
 const validators = {
   notEmpty({ state }) {
@@ -60,10 +60,10 @@ const validators = {
 ...
 <div>
   <h3>自校验</h3>
-  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator=/{{ onChange: [{ fn: validators.notEmpty }] }} />
+  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator={ { onChange: [{ fn: validators.notEmpty }] } } />
 </div>
 ```
-由于 Input 是受控组件，即组件的状态由外部引发改变。我们通过组件的默认事件 onChange 来判断是否当前输入框为空。注意到 `validator` 这个 prop 传入的数据结构。
+由于 Input 是受控组件，即组件的状态由外部引发改变。我们通过组件的默认事件 onChange 来判断是否当前输入框为空。注意到 `validator` 这个 prop 传入的数据结构。
 
 再看 notEmpty 这个函数，state 作为默认参数可以直接访问。这里的 state 即为 Input 组件的状态树，它的完整结构如下
 ```json
@@ -117,7 +117,7 @@ const validators = {
 ```
 notExist 直接返回一个 promise  交给后台 validation 使用。用户无需再定义处理异步的流程。
 
-## 组件显隐
+## 组件显隐
 
 ```js
 const validators = {
