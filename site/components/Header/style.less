@@ -1,0 +1,105 @@
+@import '../../styles/color.less';
+
+header {
+  // display: block;
+  background-color: @main;
+  z-index: 999;
+  padding: 5px 40px;
+  box-shadow: rgba(84, 70, 35, 0.2) 0px 3px 12px;
+  // transition:opacity 300ms
+}
+:global(.scrolling) {
+  background-color: @grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  box-shadow: rgba(84, 70, 35, 0.2) 0px 3px 12px;
+  transition: 300ms
+}
+
+:global(.dd-menu-items) {
+  ul li a {
+    padding: 5px 5px;
+  }
+}
+
+.logo {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+.logo img {
+  height: 35px;
+  width: auto;
+  margin: 5px 20px;
+}
+
+.logo p {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav {
+  overflow: visible;
+  text-align: right;
+}
+nav a {
+
+}
+nav .link {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+nav .link a {
+  color: white;
+}
+nav a:hover {
+  color: @light-blue;
+}
+:global(.active)  {
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+}
+@media (max-width: 48em) {
+  .setting {
+    display: none;
+  }
+}
+.setting {
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px 16px;
+}
+
+// MARK  media query should put into high priority
+@media screen and (max-width: 48em) {
+  .setting {
+    display: none;
+  }
+}
+.setting button {
+  text-decoration: none;
+  text-align: center;
+  background: transparent;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  color: white;
+  overflow: hidden;
+  padding: 4px 13px;
+}
+
+
+.select {
+  margin-left: 5px;
+  color: black;
+}

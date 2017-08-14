@@ -1,0 +1,77 @@
+@import '../../../styles/color.less';
+
+.container {
+  position: relative;
+  font-size: 12px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.githubLink {
+  float: right;
+  line-height: 20px;
+  padding-top: 10px;
+  margin-right: 10px;
+  font-size: 1.10em;
+}
+.main {
+  margin: auto 10px;
+  font-size: 1.25em;
+}
+
+.main p{
+  line-height: 24px;
+  margin: 1.2em 0 1.2em;
+  word-spacing: 0.05em;
+}
+
+.main ul li p {
+  display: inline;
+}
+.main ul {
+  padding-left: 2em;
+}
+
+.mian h2 {
+  border-bottom: 1px solid #ddd;
+}
+.main h1,h2,h3 {
+  line-height: 200%;
+  margin: 45px 0 1em;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.main img {
+  margin: 20px 0;
+}
+
+:global {
+    p code {
+    color: @blue;
+    border-radius: 2px;
+    padding: 3px 5px;
+    margin: 0 2px;
+    font-family: Consolas,Menlo,Courier,monospace;
+    background-color: #F5F5F5;
+    font-size: 0.85em;
+  }
+  ul {
+    list-style: none inside none;
+  }
+
+
+  ul li a {
+    display: inline;
+    font-size: 15px;
+  }
+}
+

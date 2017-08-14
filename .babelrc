@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        // "@cicada/render/lib": "./render/src"
+      }
+    }],
+    [
+      "import",
+      {
+        "libraryName": "antd"
+      }
+    ]
+  ]
+}

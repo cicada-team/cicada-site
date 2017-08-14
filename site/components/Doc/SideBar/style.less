@@ -1,0 +1,52 @@
+@import './../../../styles/color.less';
+
+.sidebar {
+  padding-right: 30px;
+}
+@media (max-width: 48em) {
+  .sidebar {
+    display: none;
+  }
+}
+.sidebar ul {
+  // clear the global setting
+  margin: 0 0 0;
+
+}
+.group {
+  padding-top: 10px;
+  font-size: 1.25em;
+  font-weight: 300;
+  border-bottom: 1px solid @line;
+  margin-bottom: 20px;
+}
+.group :last-child {
+  border-bottom: 0;
+}
+
+.section {
+  margin-left: 10px;
+}
+.item {
+  margin: 2px 0;
+}
+
+.item a{
+  display: block;
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1.6;
+  color: @font-color;
+}
+.active a{
+  color: @blue;
+  background-color:@light-grey;
+}
+.item a:hover{
+  color: @blue;
+}
+
+.current {
+  border-left: 3px solid #090633;
+  padding-left: 3px;
+}  

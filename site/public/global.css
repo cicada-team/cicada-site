@@ -1,0 +1,89 @@
+html {
+  color: #484852;
+  font-size: 12px;
+}
+body {
+  font-family: "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  margin: auto;
+  /* absolute font size for em */
+  font-size: 12px;
+}
+
+ol {
+  list-style: decimal inside none;
+}
+ol li {
+  line-height: 24px;
+  margin: 1.2em 0 1.2em;
+  word-spacing: 0.05em;
+}
+a:active, :hover {
+  outline: 0;
+  text-decoration: none;  
+}
+ul {
+  margin: 1.4em 0 1.4em;
+}
+
+ul li {
+  line-height: 24px;
+  margin: 1em 0 1em;
+  word-spacing: 0.05em;
+  list-style: disc inside none;
+}
+
+a {
+  color: #108ee9;
+}
+
+a:active {
+  color: black;
+}
+
+
+a:hover {
+  color: #413C62;
+}
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 30px;
+  /* color: black; */
+  /* letter-spacing:2.73px; */
+  font-weight: lighter;
+}
+h2, h3, h4, h5 {
+  font-weight: 600;
+  margin: 10px 0 10px;
+}
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+code {
+  color: #577399;
+  border-radius: 2px;
+  font-family: Consolas,Menlo,Courier,monospace;
+  background-color: #F5F5F5;
+  font-size: 0.85em;
+}
+
+.demo {
+  margin: 30px 0;
+}
+
+img {
+  width: 100%;
+}

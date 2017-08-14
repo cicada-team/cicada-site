@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  max-width: 960px;
+  // width: 75%;
+  margin: 10px auto; 
+  padding: 20px;
+  background-color: inherit;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.sidebar {
+  float: left;
+  width: 210px;
+}
+@media screen and (max-width: 48em) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.main {
+  float: right;
+  width: 100%;
+  max-width: 650px;
+}
+
+.content {
+
+}

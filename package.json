@@ -1,0 +1,90 @@
+{
+  "name": "cicada-engine",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "7.x",
+    "install-node": "7.10.0"
+  },
+  "tnpm": {
+    "mode": "npminstall"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --host localhost --port 8083",
+    "start-server": "/usr/app/site/node_modules/node/bin/node index.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint site",
+    "eslint-fix": "eslint --fix site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cicada-team/cicada-engine.git"
+  },
+  "author": "sskyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cicada-team/cicada-engine/issues"
+  },
+  "homepage": "https://github.com/cicada-team/cicada-engine#readme",
+  "dependencies": {
+    "@cicada/render": "^1.0.0-alpha13",
+    "babel-standalone": "^6.25.0",
+    "classnames": "^2.2.5",
+    "codemirror": "^5.26.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "koa": "^2.3.0",
+    "koa-send": "^4.1.0",
+    "koa-static": "^3.0.0",
+    "load-script": "^1.0.0",
+    "normalize.css": "^7.0.0",
+    "particles.js": "^2.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.4.2",
+    "react-codemirror": "^1.0.0",
+    "react-dom": "^15.4.2",
+    "react-helmet": "^5.1.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-transition-group": "^1.2.0"
+  },
+  "devDependencies": {
+    "antd": "^2.9.3",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "front-matter": "^2.1.2",
+    "highlight.js": "^9.12.0",
+    "js-yaml": "^3.8.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "limax": "^1.5.0",
+    "markdown-it": "^8.3.1",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-table-of-contents": "^0.3.2",
+    "minimist": "^1.2.0",
+    "node-sass": "4.5.3",
+    "prettier": "^1.4.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.4"
+  }
+}
