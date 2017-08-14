@@ -52,7 +52,7 @@ const validators = {
 
 <div>
   <h3>自校验</h3>
-  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator={{ onChange: [{ fn: validators.notEmpty }] }} />
+  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator={ { onChange: [{ fn: validators.notEmpty }] } } />
 </div>
 ```
 如上，这是一个验证输入框非空的例子。首先我们看到 Input 组件包含了一个 validator 的 prop，这是我们事先定义好的 prop，在初始化组件的时候，如果发现存在一个 validator prop，Cicada 就意识到这是一个 Validation Utility，那么相应的，就会采取 Validation 的扩展机制来处理当前组件。
@@ -120,11 +120,11 @@ export function check({mapBackgroundToState}) {}
 ```
 每个 Job 扩展都提供了如上的接口：
 * register() 注册该 Job 扩展
-* run() 运行所有注册的依赖
+* run() 运行所有注册的依赖
 * handle() 更新状态树
-* check() 用来判断当前组件是否需要启动相应的 Job 扩展
+* check() 用来判断当前组件是否需要启动相应的 Job 扩展
 
-需要注意的是，不论 Utility 或者 Job 扩展，只有 check 返回为 true 的时候，才会调用相应扩展，进行初始化。所以如果观察之前的组件，我们会发现组件上的 prop 名称就是 check 里面的参数，比如 validation 和 mapBackgroundToState。
+需要注意的是，不论 Utility 或者 Job 扩展，只有 check 返回为 true 的时候，才会调用相应扩展，进行初始化。所以如果观察之前的组件，我们会发现组件上的 prop 名称就是 check 里面的参数，比如 validation 和 mapBackgroundToState。
 
 
 ## Background  
