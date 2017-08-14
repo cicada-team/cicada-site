@@ -60,7 +60,7 @@ const validators = {
 ...
 <div>
   <h3>自校验</h3>
-  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator={{ onChange: [{ fn: validators.notEmpty }] }} />
+  <C.Input bind="name" getInitialState={() => ({ label: '姓名' })} validator=/{{ onChange: [{ fn: validators.notEmpty }] }} />
 </div>
 ```
 由于 Input 是受控组件，即组件的状态由外部引发改变。我们通过组件的默认事件 onChange 来判断是否当前输入框为空。注意到 `validator` 这个 prop 传入的数据结构。
