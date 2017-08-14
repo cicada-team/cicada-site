@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import Menu from './DropdownMenu'
 import styles from './style.less'
-import logo from '../../public/assets/log.png'
-
 
 export default class Header extends Component {
   constructor() {
@@ -16,7 +14,7 @@ export default class Header extends Component {
     return (
       <header className={styles.header} >
         <div className={styles.logo} >
-          <img src={logo} alt="cicada logo" />
+          <img src="https://gw.alipayobjects.com/zos/rmsportal/nGaiVXyUTiJdCwOuuXQI.png" alt="cicada logo" />
         </div>
         <nav className={styles.nav}>
           <div className={styles.link}>

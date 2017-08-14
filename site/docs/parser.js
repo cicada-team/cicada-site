@@ -8,8 +8,8 @@ const slug = require('limax')
 
 /**
  * highlight.js config
- * @param {*} str 
- * @param {*} lang 
+ * @param {*} str
+ * @param {*} lang
  */
 const highlight = (str, lang) => {
   if (lang != null && hljs.getLanguage(lang)) {

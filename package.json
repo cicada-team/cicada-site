@@ -7,9 +7,7 @@
     "node": "7.x",
     "install-node": "7.10.0"
   },
-  "tnpm": {
-    "mode": "npminstall"
-  },
+
   "scripts": {
     "start": "webpack-dev-server --host localhost --port 8083",
     "start-server": "/usr/app/site/node_modules/node/bin/node index.js",
