@@ -119,13 +119,13 @@ ReactDom.render(
             text: 'task',
             completed: false,
           })}
-          listeners={{
+          listeners={ {
             onTodoClick: {
               fns: [{
                 fn: markCompleted,
               }],
             },
-          }}
+          } }
           visible={[showVisible]}
         />
       </C.TodoList>
