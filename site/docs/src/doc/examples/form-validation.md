@@ -87,8 +87,8 @@ const validators = {
 <div>
   <h3>联合校验</h3>
   <p>爱好一写Dota，爱好二写LOL就会出错</p>
-  <C.Input bind="hobby1" getInitialState={() => ({ label: '爱好一' })} validator={{ onChange: [{ fn: validators.notDotaAndLoL, group: 'hobby' }] }} />
-  <C.Input bind="hobby2" getInitialState={() => ({ label: '爱好二' })} validator={{ onChange: [{ fn: validators.notDotaAndLoL, group: 'hobby' }] }} />
+  <C.Input bind="hobby1" getInitialState={() => ({ label: '爱好一' })} validator={ { onChange: [{ fn: validators.notDotaAndLoL, group: 'hobby' }] } } />
+  <C.Input bind="hobby2" getInitialState={() => ({ label: '爱好二' })} validator={ { onChange: [{ fn: validators.notDotaAndLoL, group: 'hobby' }] } } />
 </div>
 ```
 由于我们可以通过 stateTree 获取任意组件的状态，我们可以通过关联2个组件的状态来实现联合校验。确保需要关联的组件具备同样的 validator，比如例子中的 notDotaAndLoL，同时确保 group 一致。TODO 
